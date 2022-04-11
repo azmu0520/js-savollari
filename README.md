@@ -39,7 +39,7 @@ _Click <img src="assets/star.png" width="18" height="18" align="absmiddle" title
 
 ## Q. **_JavaScript ES6 dagi eng muhim bo'lgan hususiyatlarini sanab bering_**
 
-**1. Strings Shablonlari:**
+**1. String Shablonlari:**
 
 Shablon harflari strinda yozilgan malumotlarga javascript expressionlarni qo'shib yozishga yordam beradi.
 
@@ -129,7 +129,7 @@ console.log(result);
     <b><a href="#">↥ yuqoriga</a></b>
 </div>
 
-**2.3. Yagona bir elementga yangi array elemementlarini qo'shish:**
+**2.3. Bir elementga yangi array elemementlarini qo'shish:**
 
 ```js
 let fruits = ['Apple', 'Orange', 'Banana'];
@@ -169,7 +169,7 @@ Fruits: Apple, Orange and Banana
     <b><a href="#">↥ yuqoriga</a></b>
 </div>
 
-**2.5. Spread syntax for object literals:**
+**2.5. objectlar uchun spread operatorni sytaksisi:**
 
 ```js
 var obj1 = { id: 101, name: 'WebBrain' };
@@ -324,8 +324,6 @@ console.log(description); // The Front-end is a easiest way to start web dev
 
 **9. Generators:**
 
-A generator is a function that can stop midway and then continue from where it stopped. In short, a generator appears to be a function but it behaves like an `iterator`.
-
 Generator bu funksiya hisoblanib ma'lum nuqtada to'xtab va yana qaytadan o'sha joydan boshlab davom etadi. Qisqa qilib aytganda generator funksiya ga o'xshagani bilan u `iterator` kabi ishlaydi
 
 ```js
@@ -348,8 +346,6 @@ console.log(gen.next().value); // 40
 </div>
 
 **10. Symbols:**
-
-They are tokens that serve as unique IDs. We create symbols via the factory function Symbol(). Symbols primary use case is for making private object properties, which can be only of type String or Symbol (Numbers are automatically converted to Strings).
 
 Ular noyob identifikator sifatida xizmat qiluvchi tokenlardir. Biz Symbol() funksiyasi orqali symbollar yaratamiz. Symbollardan asosiy foydalanish holi faqat String yoki Symbol tipidagi bo'lishi mumkin bo'lgan xususiy ob'yekt xususiyatlarini yaratish uchun mo'ljallangan (Raqamlar avtomatik ravishda Stringlarga aylantiriladi).
 
