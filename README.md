@@ -15,7 +15,7 @@ _Click <img src="assets/star.png" width="18" height="18" align="absmiddle" title
 ## Table of Contents
 
 - [Introduction](#-introduction)
-- [Variables](#-variables)
+- [o'zgaruvchilar](#-o'zgaruvchilar)
 - [Data types](#-data-types)
 - [Operators](#-operators)
 - [Numbers](#-numbers)
@@ -148,7 +148,7 @@ console.log(newFruits);
     <b><a href="#">↥ yuqoriga</a></b>
 </div>
 
-**2.4. **
+**2.4. Funksiya argumentida spread operatorni foydalanish :**
 
 ```js
 let fruits = ["Apple", "Orange", "Banana"];
@@ -169,7 +169,7 @@ Fruits: Apple, Orange and Banana
     <b><a href="#">↥ yuqoriga</a></b>
 </div>
 
-**2.5. objectlar uchun spread operatorni sytaksisi:**
+**2.5.Oobjectlar uchun spread operatorni sytaksisi:**
 
 ```js
 var obj1 = { id: 101, name: 'WebBrain' };
@@ -392,7 +392,7 @@ console.log(iterateIt.next().value); //output: undefined
 
 ## # VARIABLES
 
-## Q. **_What are global variables?_**
+## Q. **_Global o'zgaruvchilar nima?_**
 
 Global o'zgaruvchilar funnksiyadan tashqarida e'lon qilinadi yoki dastur davomida foydalanish imkoniyati uchun window obyekti bilan elon qilinadi (agar local variable tomonidan to'sib qolinmasa). Agar o'zgaruvchini var ishlatmasdan e'lon qilsangizz, u funktsiya ichida bolsa ham u global sifatida ko'rinadi
 
@@ -419,12 +419,12 @@ console.log(x);
 ```js
 window.value = 90;
 
-// Declaring global variable by window object
+// window object orqali global variable e'lon qilish
 function setValue() {
   window.value = 100;
 }
 
-// Accessing global variable from other function
+// Global variable ga boshqa funksiya orqali qiymat belgilash
 function getValue() {
   setValue();
   return window.value;
@@ -437,18 +437,16 @@ console.log(getValue()); // 100
 
 - Strict mode da, agar siz e'lon qilinmagan o'zgaruvchidan foydalanmoqchi bo'lsangiz, kodingizni ishga tushirganingizda havola xatosi paydo bo'ladi.
 
-- Qattiq rejimdan tashqarida, agar siz `let`, `const` yoki `var` bilan e`lon qilinmagan nomga qiymat belgilasangiz, yangi global o`zgaruvchini yaratasiz. Bu sizning kodingiz funksiyalar va bloklar ichida qanchalik chuqur joylashgan bo'lishidan qat'i nazar, global bo'ladi, bu deyarli siz xohlagan narsa emas, xatolarga moyil va qat'iy rejimdan foydalanishning eng yaxshi sabablaridan biri hisoblanadi!
+- Qattiq rejimdan tashqarida, agar siz `let`, `const` yoki `var` bilan e'lon qilinmagan nomga qiymat belgilasangiz, yangi global o`zgaruvchini yaratasiz. Bu sizning kodingiz funksiyalar va bloklar ichida qanchalik chuqur joylashgan bo'lishidan qat'i nazar, global bo'ladi, bu deyarli siz xohlagan narsa emas, xatolarga moyil va qat'iy rejimdan foydalanishning eng yaxshi sabablaridan biri hisoblanadi!
 - Bunday tasodifiy tarzda yaratilgan global o'zgaruvchilar `var` bilan e'lon qilingan global o'zgaruvchilarga o'xshaydi: ular global ob'ektning xususiyatlarini belgilaydi. Lekin tegishli var deklaratsiyalari bilan belgilangan xususiyatlardan farqli o'laroq, bu xususiyatlarni delete operatori bilan o'chirib tashlash mumkin.
 
-**&#9885; [CodeSandbox da kodni tekshirib ko'ring](https://codesandbox.io/s/js-global-variables-b4isqk?file=/src/index.js)**
+**&#9885; [CodeSandbox da kodni tekshirib ko'ring](https://codesandbox.io/s/js-global-o'zgaruvchilar-b4isqk?file=/src/index.js)**
 
 <div align="right">
     <b><a href="#">↥ yuqoriga</a></b>
 </div>
 
 ## Q. **_Es6 da shablon harflari(template literals) nima?_**
-
-Template literals help make it simple to do string interpolation, or to include variables in a string.
 
 Shablon hariflari stringlarga qo'shimcha kirtishni osonlashtiradi , yoki o'zgaruvchilarni string ichida foydalanishga imkon beradi.
 
@@ -459,8 +457,6 @@ console.log(`Hi, my name is ${person.name} and I am ${person.age} years old!`);
 // 'Hi, my name is Azizbek and I am 21 years old!'
 ```
 
-Template literals, however, preserve whatever spacing you add to them. For example, to create that same multi-line output that we created above, you can simply do:
-
 Shablon hariflari stringlar orasidagi bo'sh joylarni siz yozgan holatda qoldiradi bunga siz `html` da guvoh bo'lgansiz `pre` tagi orqali
 
 ```js
@@ -469,8 +465,6 @@ In this year.`);
 // Get married.
 // In this year.
 ```
-
-Another use case of template literals would be to use as a substitute for templating libraries for simple variable interpolations:
 
 Shablon harflaridan foydalanishning yana bir holati oddiy o'zgaruchilarni html elementlari orqasida elon qila olishingizdir
 
@@ -498,7 +492,7 @@ document.body.innerHTML = `
  * Barcha o'zgaruvchilarga funksiyalar ichida kirish mumkin.
  *
  **/
-function variableScope() {
+function o'zgaruvchilarcope() {
   var x = 10;
   let y = 20;
   const z = 30;
@@ -512,7 +506,7 @@ console.log(x); // ReferenceError: x is not defined
 console.log(y); // ReferenceError: y is not defined
 console.log(z); // ReferenceError: z is not defined
 
-variableScope();
+o'zgaruvchilarcope();
 ```
 
 ```js
@@ -555,9 +549,7 @@ let baz = 'baz';
 let baz = 'qux'; // Uncaught SyntaxError: Identifier 'baz' has already been declared
 ```
 
-`let` and `const` differ in that `let` allows reassigning the variable's value while `const` does not.
-
-`let` va `const` o'zgaruchilarining farqalri `let` qiymatni qayta belgilashga imkon beradi ammo `const` esa yoq
+`let` va `const` o‘zgaruvchining qiymatini qayta belgilash imkonini berishi bilan farq qiladi, `const` esa bunday emas.
 
 ```js
 // Bu yaxshi amaliyot
@@ -570,21 +562,19 @@ const name = 'Sardor';
 name = 'Ali';
 ```
 
-**&#9885; [CodeSandbox da kodni tekshirib ko'ring](https://codesandbox.io/s/js-variables-declaration-fmrkjz?file=/src/index.js)**
+**&#9885; [CodeSandbox da kodni tekshirib ko'ring](https://codesandbox.io/s/js-o'zgaruvchilar-declaration-fmrkjz?file=/src/index.js)**
 
 <div align="right">
     <b><a href="#">↥ yuqoriga</a></b>
 </div>
 
-## Q. **_What is Hoisting in JavaScript?_**
+## Q. **_JavaScript Hoisting nima ?_**
 
-JavaScript **Hoisting** refers to the process whereby the interpreter appears to move the declaration of functions, variables or classes to the top of their scope, prior to execution of the code.
-
-Hoisting allows functions to be safely used in code before they are declared.
+JavaScript **Hoisting** funksiya o'zgaruvchilar yoki classlarni foydalanishni ularni o'rab turgan blogning eng tepaga olib chiqish nazarda tutiladi yani ularni e'lon qilishdan oldin ham ishlata olish imkonini beradi
 
 **Example 01:** Function Hoisting
 
-One of the advantages of hoisting is that it lets you use a function before you declare it in your code.
+Hoisting afzalliklaridan biri shundaki, u kodingizda e'lon qilishdan oldin funksiyadan foydalanishga imkon beradi.
 
 ```js
 getName("Sadhika Sandal");
@@ -604,7 +594,7 @@ console.log(message); // output : undefined
 var message = 'The variable Has been hoisted';
 ```
 
-The above code looks like as below to the interpreter,
+Yuqoridagi kod dasturchi uchun quyidagi kabi ko'rinadi,
 
 ```js
 var message;
@@ -612,9 +602,9 @@ console.log(message);
 message = 'The variable Has been hoisted';
 ```
 
-**Example 03:** `let` and `const` hoisting
+**Example 03:** `let` va `const` hoisting
 
-All declarations (function, var, let, const and class) are hoisted in JavaScript, while the `var` declarations are initialized with `undefined`, but `let` and `const` declarations remain uninitialized.
+Barcha e'lon qilinuvchilar (function, var, let, const and class) hoisted hisoblanadi , `var` ning qiymati `undefined` holatida ko'tariladi lekin `let` and `const` uninitialized holatida hatolikka uchraydi
 
 ```js
 console.log(x);
@@ -623,9 +613,7 @@ let x = 10;
 // Output: ReferenceError: x is not defined
 ```
 
-They will only get initialized when their lexical binding (assignment) is evaluated during runtime by the JavaScript engine. This means we can\'t access the variable before the engine evaluates its value at the place it was declared in the source code. This is what we call **Temporal Dead Zone**, A time span between variable creation and its initialization where they can\'t be accessed.
-
-_Note: JavaScript only hoists declarations, not initialisation_
+_Note: JavaScript faqat deklaratsiyalarni ko'taradi, ishga tushirish emas_
 
 **&#9885; [CodeSandbox da kodni tekshirib ko'ring](https://codesandbox.io/s/js-hoisting-l745nc?file=/src/index.js)**
 
@@ -633,9 +621,11 @@ _Note: JavaScript only hoists declarations, not initialisation_
     <b><a href="#">↥ yuqoriga</a></b>
 </div>
 
-## Q. **_What is the Temporal Dead Zone in ES6?_**
+## Q. **_ES6 da Temporal Dead Zone nima_**
 
 In ES6, let bindings are not subject to Variable Hoisting, which means that let declarations do not move to the top of the current execution context. Referencing the variable in the block before the initialization results in a `ReferenceError` (contrary to a variable declared with var, which will just have the undefined value). The variable is in a “temporal dead zone” from the start of the block until the initialization is processed.
+
+ES6 da let bindinglar variable hoisting uchun muhim emas yani let bilan elon qilingan o'zgaruvchilar blokning yuqorisiga ko'tarilmaydi . O'zgaruvchilarni e'lon qilishdan oldin ularga
 
 ```javascript
 console.log(aVar); // undefined
@@ -678,8 +668,8 @@ _Note: The expression !! is not an operator, but it is just twice of ! operator_
 
 - Allowed in 'strict mode'.
 - The var statement declares a function-scoped or globally-scoped variable, optionally initializing it to a value.
-- Variables declared using var inside a { } block can be accessed from outside the block.
-- Variables defined using var inside a function are not accessible (visible) from outside the function.
+- o'zgaruvchilar declared using var inside a { } block can be accessed from outside the block.
+- o'zgaruvchilar defined using var inside a function are not accessible (visible) from outside the function.
 - Duplicate variable declarations using var will not trigger an error, even in strict mode, and the variable will not lose its value unless another assignment is performed.
 
 ```js
@@ -710,9 +700,9 @@ console.log(x); // 5
 `x = 1`:
 
 - Not allowed in 'strict mode'.
-- Undeclared Variables like: x = 1 is accessible in: (Block scope - Function scope - Global scope)
+- Undeclared o'zgaruvchilar like: x = 1 is accessible in: (Block scope - Function scope - Global scope)
 - Outside of strict mode, however, if you assign a value to a name that has not been declared with let, const, or var, you\'ll end up creating a new global variable. It will be global no matter how deeply nested within functions and blocks your code is, which is almost certainly not what you want, is bug-prone, and is one of the best reasons for using strict mode!
-- Global variables created in this accidental way are like global variables declared with var: they define properties of the global object.
+- Global o'zgaruvchilar created in this accidental way are like global o'zgaruvchilar declared with var: they define properties of the global object.
 - Unlike the properties defined by proper var declarations, these properties can be deleted with the delete operator.
 - Not recommended.
 
@@ -825,7 +815,7 @@ console.log(typeof test2); // undefined
     <b><a href="#">↥ yuqoriga</a></b>
 </div>
 
-## Q. **_How do you assign default values to variables?_**
+## Q. **_How do you assign default values to o'zgaruvchilar?_**
 
 You can use the logical or operator `||` in an assignment expression to provide a default value. The syntax looks like as below,
 
@@ -839,7 +829,7 @@ As per the above expression, variable 'a 'will get the value of 'c' only if 'b' 
     <b><a href="#">↥ yuqoriga</a></b>
 </div>
 
-## Q. **_What is the precedence order between local and global variables?_**
+## Q. **_What is the precedence order between local and global o'zgaruvchilar?_**
 
 A local variable takes precedence over a global variable with the same name.
 
@@ -913,7 +903,7 @@ _Note: 'self' should not be used this way anymore, since modern browsers provide
     <b><a href="#">↥ yuqoriga</a></b>
 </div>
 
-## Q. **_How do you swap variables using Destructuring Assignment?_**
+## Q. **_How do you swap o'zgaruvchilar using Destructuring Assignment?_**
 
 ```js
 var x = 10,
@@ -1101,7 +1091,7 @@ Below are the list of bit-wise logical operators used in JavaScript
 
 ## Q. **_What is the difference between == and === operators?_**
 
-JavaScript provides both strict(===, !==) and type-converting(==, !=) equality comparison. The strict operators takes type of variable in consideration, while non-strict operators make type correction/conversion based upon values of variables. The strict operators follow the below conditions for different types,
+JavaScript provides both strict(===, !==) and type-converting(==, !=) equality comparison. The strict operators takes type of variable in consideration, while non-strict operators make type correction/conversion based upon values of o'zgaruvchilar. The strict operators follow the below conditions for different types,
 
 1. Two strings are strictly equal when they have the same sequence of characters, same length, and same characters in corresponding positions.
 2. Two numbers are strictly equal when they are numerically equal. i.e, Having the same number value.
@@ -1455,7 +1445,7 @@ value of `x` is `NaN`, the statements are not the same.
 
 The same holds true for any value of x that being converted to Number, returns NaN, e.g.: `undefined`, `[1,2,5]`, `{a:22}` , etc.
 
-This is why you need to pay attention when you deal with numeric variables. `NaN` can\'t be equal, less than or more than any other numeric value, so the only reliable way to check if the value is `NaN`, is to use `isNaN()` function.
+This is why you need to pay attention when you deal with numeric o'zgaruvchilar. `NaN` can\'t be equal, less than or more than any other numeric value, so the only reliable way to check if the value is `NaN`, is to use `isNaN()` function.
 
 <div align="right">
     <b><a href="#">↥ yuqoriga</a></b>
@@ -2005,7 +1995,7 @@ console.log(z); // 6
 
 ## Q. **_Can you give an example for destructuring an array?_**
 
-Destructuring is an expression available in ES6 which enables a succinct and convenient way to extract values of Objects or Arrays and place them into distinct variables.
+Destructuring is an expression available in ES6 which enables a succinct and convenient way to extract values of Objects or Arrays and place them into distinct o'zgaruvchilar.
 
 ```js
 // Variable assignment.
@@ -2018,7 +2008,7 @@ console.log(three); // "three"
 ```
 
 ```js
-// Swapping variables
+// Swapping o'zgaruvchilar
 let a = 1;
 let b = 3;
 
@@ -2328,7 +2318,7 @@ console.log(anotherArrayList); // Output ['a', 'b', 'c', 'd', 'e', 'f']
 arrayList.length = 0;
 ```
 
-The code above will clear the existing array by setting its length to 0. This way of emptying an array will also update all the reference variables that point to the original array.
+The code above will clear the existing array by setting its length to 0. This way of emptying an array will also update all the reference o'zgaruvchilar that point to the original array.
 
 For instance:
 
@@ -3357,7 +3347,7 @@ console.log(z); // 50
 
 ## Q. **_What is a typical use case for anonymous functions?_**
 
-They can be used in IIFEs to encapsulate some code within a local scope so that variables declared in it do not leak to the global scope.
+They can be used in IIFEs to encapsulate some code within a local scope so that o'zgaruvchilar declared in it do not leak to the global scope.
 
 ```js
 (function () {
@@ -3390,7 +3380,7 @@ console.log(double); // [2, 4, 6]
 
 ## Q. **\*Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`?\*\*\*\***
 
-The former is a function declaration while the latter is a function expression. The key difference is that function declarations have its body hoisted but the bodies of function expressions are not (they have the same hoisting behavior as variables). For more explanation on hoisting, refer to the question above [on hoisting](#explain-hoisting). If you try to invoke a function expression before it is defined, you will get an `Uncaught TypeError: XXX is not a function` error.
+The former is a function declaration while the latter is a function expression. The key difference is that function declarations have its body hoisted but the bodies of function expressions are not (they have the same hoisting behavior as o'zgaruvchilar). For more explanation on hoisting, refer to the question above [on hoisting](#explain-hoisting). If you try to invoke a function expression before it is defined, you will get an `Uncaught TypeError: XXX is not a function` error.
 
 **Function Declaration:**
 
@@ -3860,11 +3850,11 @@ _Note: `querySelector()` is more useful when we want to use more complex selecto
 
 ## Q. **_What are closures?_**
 
-A closure is the combination of a function and the lexical environment within which that function was declared. i.e, It is an inner function that has access to the outer or enclosing function\'s variables. The closure has three scope chains
+A closure is the combination of a function and the lexical environment within which that function was declared. i.e, It is an inner function that has access to the outer or enclosing function\'s o'zgaruvchilar. The closure has three scope chains
 
-- Own scope where variables defined between its curly brackets
-- Outer function’s variables
-- Global variables
+- Own scope where o'zgaruvchilar defined between its curly brackets
+- Outer function’s o'zgaruvchilar
+- Global o'zgaruvchilar
 
 ```js
 function Welcome(name) {
@@ -3878,7 +3868,7 @@ myFunction('Welcome '); // Output: Welcome John
 myFunction('Hello Mr.'); // output: Hello Mr.John
 ```
 
-As per the above code, the inner `function greetingInfo()` has access to the variables in the outer `function Welcome()` even after outer function has returned.
+As per the above code, the inner `function greetingInfo()` has access to the o'zgaruvchilar in the outer `function Welcome()` even after outer function has returned.
 
 <div align="right">
     <b><a href="#">↥ yuqoriga</a></b>
@@ -4002,12 +3992,12 @@ var add = function (num1, num2) {
 };
 ```
 
-After a function expression has been stored in a variable, the variable can be used as a function. Functions stored in variables do not need function names. They are always invoked (called) using the variable name.
+After a function expression has been stored in a variable, the variable can be used as a function. Functions stored in o'zgaruvchilar do not need function names. They are always invoked (called) using the variable name.
 
 **Difference:**
 
 - `Function declarations` load before any code is executed while `Function expressions` load only when the interpreter reaches that line of code.
-- Similar to the `var` statement, function declarations are hoisted to the top of other code. Function expressions aren\'t hoisted, which allows them to retain a copy of the local variables from the scope where they were defined.
+- Similar to the `var` statement, function declarations are hoisted to the top of other code. Function expressions aren\'t hoisted, which allows them to retain a copy of the local o'zgaruvchilar from the scope where they were defined.
 
 **Benefits of Function Expressions:**
 
@@ -4619,7 +4609,7 @@ var v7 = function () {};
 
 ## Q. **_Can you give an example for destructuring an object?_**
 
-Destructuring is an expression available in ES6 which enables a succinct and convenient way to extract values of Objects or Arrays and place them into distinct variables.
+Destructuring is an expression available in ES6 which enables a succinct and convenient way to extract values of Objects or Arrays and place them into distinct o'zgaruvchilar.
 
 ```js
 // Variable assignment.
@@ -4832,7 +4822,7 @@ Here each instance variable `emp1`, `emp2`, `emp3` has own copy of `formatSalary
 
 ## Q. **_How to extend built-in objects?_**
 
-All objects in JS contains a prototype property, even the variables we declare. Since we don\'t have access to the JS source code, thus, we cannot insert our custom functionality in String object by fiddling with JS source code, we use the String object’s prototype as another approach to insert our functionality.
+All objects in JS contains a prototype property, even the o'zgaruvchilar we declare. Since we don\'t have access to the JS source code, thus, we cannot insert our custom functionality in String object by fiddling with JS source code, we use the String object’s prototype as another approach to insert our functionality.
 
 ```js
 String.prototype.regexIt = function () {
@@ -5884,8 +5874,8 @@ It's much more verbose to use inheritance in ES5 and the ES6 version is easier t
 
 ## Q. **_What is difference between private variable, public variable and static variable? How we achieve this in JS?_**
 
-Private and public variables are two ways of information hiding. An object can have private and public variables. Private variables can be accessed by all the members (functions and variables) of the owner object but not by any other object. Public variables can be accessed by all the members of the owner as well as other objects that can access the owner.
-Static variables are related to a class. They come into existence as soon as a class come into existence.
+Private and public o'zgaruvchilar are two ways of information hiding. An object can have private and public o'zgaruvchilar. Private o'zgaruvchilar can be accessed by all the members (functions and o'zgaruvchilar) of the owner object but not by any other object. Public o'zgaruvchilar can be accessed by all the members of the owner as well as other objects that can access the owner.
+Static o'zgaruvchilar are related to a class. They come into existence as soon as a class come into existence.
 
 Now, JavaScript natively doesn\'t support these concepts. But you can use JavaScript's closure techniques to achieve the similar results.
 
@@ -6931,7 +6921,7 @@ An iterator is an object which defines a sequence and a return value upon its te
 
 ## Q. **_What is modules in ES6?_**
 
-Making objects, functions, classes or variables available to the outside world is as simple as exporting them, and then importing them where needed in other files.
+Making objects, functions, classes or o'zgaruvchilar available to the outside world is as simple as exporting them, and then importing them where needed in other files.
 
 **Benefits**
 
@@ -6989,7 +6979,7 @@ export class Alligator {
 
 Javascript does not have the typical 'private' and 'public' specifiers of more traditional object oriented languages like C# or Java. However, you can achieve the same effect through the clever application of Javascript's function-level scoping. The Revealing Module pattern is a design pattern for Javascript applications that elegantly solves this problem.
 
-The central principle of the Revealing Module pattern is that all functionality and variables should be hidden unless deliberately exposed.
+The central principle of the Revealing Module pattern is that all functionality and o'zgaruvchilar should be hidden unless deliberately exposed.
 
 The Revealing Module Pattern is one of the most popular ways of creating modules. Using the return statement we can return a object literal that ‘reveals’ only the methods or properties we want to be publicly available.
 
@@ -7022,7 +7012,7 @@ myModule._privateMethod(); // is TypeError protected by the module closure
 
 **Advantages**
 
-This pattern allows the syntax of our scripts to be more consistent. It also makes it easier to tell at the end of the module which of our functions and variables may be accessed publicly, which eases readability.
+This pattern allows the syntax of our scripts to be more consistent. It also makes it easier to tell at the end of the module which of our functions and o'zgaruvchilar may be accessed publicly, which eases readability.
 
 **Disadvantages**
 
@@ -7119,7 +7109,7 @@ In Object-oriented paradigm, an existing API contains certain elements that are 
 
 ## Q. **_Explain the difference between Object.freeze() vs const?_**
 
-`const` applies to bindings ("variables"). It creates an immutable binding, i.e. you cannot assign a new value to the binding. `const` behaves like let. The only difference is, it defines a variable that cannot be reassigned. Variables declared by const are block scoped and not function scoped like variables declared with var.
+`const` applies to bindings ("o'zgaruvchilar"). It creates an immutable binding, i.e. you cannot assign a new value to the binding. `const` behaves like let. The only difference is, it defines a variable that cannot be reassigned. o'zgaruvchilar declared by const are block scoped and not function scoped like o'zgaruvchilar declared with var.
 
 The const keyword applies to bindings and creates an immutable binding.
 
@@ -7734,7 +7724,7 @@ The `XMLHttpRequest` API is frequently used for the asynchronous communication o
 
 - Better interactivity. New content from the server can be changed dynamically without the need to reload the entire page.
 - Reduce connections to the server since scripts and stylesheets only have to be requested once.
-- State can be maintained on a page. JavaScript variables and DOM state will persist because the main container page was not reloaded.
+- State can be maintained on a page. JavaScript o'zgaruvchilar and DOM state will persist because the main container page was not reloaded.
 - Basically most of the advantages of an SPA.
 
 <div align="right">
@@ -7757,7 +7747,7 @@ The Strict Mode is allows you to place a program, or a function, in a `strict` o
 
 **Advantages:**
 
-- Makes it impossible to accidentally create global variables.
+- Makes it impossible to accidentally create global o'zgaruvchilar.
 - Makes assignments which would otherwise silently fail to throw an exception.
 - Makes attempts to delete undeletable properties throw (where before the attempt would simply have no effect).
 - Requires that function parameter names be unique.
@@ -7781,7 +7771,7 @@ Asynchronous functions usually accept a callback as a parameter and execution co
 
 ## Q. **_Why you might want to create static class members?_**
 
-Static class members (properties/methods) are not tied to a specific instance of a class and have the same value regardless of which instance is referring to it. Static properties are typically configuration variables and static methods are usually pure utility functions which do not depend on the state of the instance.
+Static class members (properties/methods) are not tied to a specific instance of a class and have the same value regardless of which instance is referring to it. Static properties are typically configuration o'zgaruvchilar and static methods are usually pure utility functions which do not depend on the state of the instance.
 
 <div align="right">
     <b><a href="#">↥ yuqoriga</a></b>
@@ -7853,13 +7843,13 @@ globalVar = abc;
 The `Array.isArray()` method determines whether an object is an array. This function returns `true` if the object is an array, and `false` if not.
 
 ```js
-// Creating some variables
+// Creating some o'zgaruvchilar
 var v1 = { name: 'John', age: 22 };
 var v2 = ['red', 'green', 'blue', 'yellow'];
 var v3 = [10, 20, 30, 40, 50];
 var v4 = null;
 
-// Testing the variables data type
+// Testing the o'zgaruvchilar data type
 typeof v1; // Returns: "object"
 typeof v2; // Returns: "object"
 typeof v3; // Returns: "object"
@@ -7924,7 +7914,7 @@ var foo = function foo() {
 };
 ```
 
-In JavaScript `var`-declared variables and functions are `hoisted`. Let us take function `hoisting` first. Basically, the JavaScript interpreter looks ahead to find all the variable declaration and hoists them to the top of the function where It is declared. For example:
+In JavaScript `var`-declared o'zgaruvchilar and functions are `hoisted`. Let us take function `hoisting` first. Basically, the JavaScript interpreter looks ahead to find all the variable declaration and hoists them to the top of the function where It is declared. For example:
 
 ```js
 foo(); // Here foo is still undefined
@@ -8081,7 +8071,7 @@ That's it. The rest is details.
 
 **Applications and usefulness**
 
-Variables and functions that you declare inside an IIFE are not visible to the outside world, so you can:
+o'zgaruvchilar and functions that you declare inside an IIFE are not visible to the outside world, so you can:
 
 - Use the IIFE for isolating parts of the code to hide details of implementation.
 - Specify the input interface of your code by passing commonly used global objects (window, document, jQuery, etc.) IIFE’s parameters, and then reference these global objects within the IIFE via a local scope.
@@ -8095,7 +8085,7 @@ Variables and functions that you declare inside an IIFE are not visible to the o
 
 ## Q. **_Describe Singleton Pattern In JavaScript?_**
 
-The singleton pattern is an often used JavaScript design pattern. It provides a way to wrap the code into a logical unit that can be accessed through a single variable. The Singleton design pattern is used when only one instance of an object is needed throughout the lifetime of an application. In JavaScript, Singleton pattern have many uses, they can be used for NameSpacing, which reduce the number of global variables in your page (prevent from polluting global space), organizing the code in a consistent manner, which increase the readability and maintainability of your pages.
+The singleton pattern is an often used JavaScript design pattern. It provides a way to wrap the code into a logical unit that can be accessed through a single variable. The Singleton design pattern is used when only one instance of an object is needed throughout the lifetime of an application. In JavaScript, Singleton pattern have many uses, they can be used for NameSpacing, which reduce the number of global o'zgaruvchilar in your page (prevent from polluting global space), organizing the code in a consistent manner, which increase the readability and maintainability of your pages.
 
 There are two important points in the traditional definition of Singleton pattern:
 
